@@ -1,0 +1,18 @@
+PODS:
+  - Alloy (0.14.1):
+    - Alloy/Core (= 0.14.1)
+  - Alloy/Core (0.14.1)
+
+DEPENDENCIES:
+  - Alloy
+
+SPEC REPOS:
+  trunk:
+    - Alloy
+
+SPEC CHECKSUMS:
+  Alloy: 699cc1a530ca68527ff2edea90584a68e72bd745
+
+PODFILE CHECKSUM: 7a8c4fc1b980b6dd5238a12b963084e89ab71e10
+
+COCOAPODS: 1.9.1
