@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		A257AF13246D45DD00B9C252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A257AF11246D45DD00B9C252 /* Main.storyboard */; };
 		A257AF15246D45DE00B9C252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A257AF14246D45DE00B9C252 /* Assets.xcassets */; };
 		A257AF18246D45DE00B9C252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A257AF16246D45DE00B9C252 /* LaunchScreen.storyboard */; };
+		A257AF20246D491600B9C252 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A257AF1F246D491600B9C252 /* Shaders.metal */; };
+		A26B8424246EC081004B330D /* ContrastProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26B8423246EC081004B330D /* ContrastProcessor.swift */; };
 		ABDBD4C37614E0D707AFE7C9 /* Pods_UIKonfDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B622E338958229D37F5188D1 /* Pods_UIKonfDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,9 @@
 		A257AF14246D45DE00B9C252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A257AF17246D45DE00B9C252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A257AF19246D45DE00B9C252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A257AF1F246D491600B9C252 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		A257AF21246D4A2B00B9C252 /* UIKonfDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKonfDemo.entitlements; sourceTree = "<group>"; };
+		A26B8423246EC081004B330D /* ContrastProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastProcessor.swift; sourceTree = "<group>"; };
 		B622E338958229D37F5188D1 /* Pods_UIKonfDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKonfDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +53,6 @@
 				35AF918C3112FD99C71C1C5B /* Pods-UIKonfDemo.debug.xcconfig */,
 				7A0D4A3BAC3248524F949B48 /* Pods-UIKonfDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,6 +77,7 @@
 		A257AF0A246D45DD00B9C252 /* UIKonfDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A257AF21246D4A2B00B9C252 /* UIKonfDemo.entitlements */,
 				A257AF0B246D45DD00B9C252 /* AppDelegate.swift */,
 				A257AF0D246D45DD00B9C252 /* SceneDelegate.swift */,
 				A257AF0F246D45DD00B9C252 /* ViewController.swift */,
@@ -80,6 +85,8 @@
 				A257AF14246D45DE00B9C252 /* Assets.xcassets */,
 				A257AF16246D45DE00B9C252 /* LaunchScreen.storyboard */,
 				A257AF19246D45DE00B9C252 /* Info.plist */,
+				A257AF1F246D491600B9C252 /* Shaders.metal */,
+				A26B8423246EC081004B330D /* ContrastProcessor.swift */,
 			);
 			path = UIKonfDemo;
 			sourceTree = "<group>";
@@ -207,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A257AF20246D491600B9C252 /* Shaders.metal in Sources */,
 				A257AF10246D45DD00B9C252 /* ViewController.swift in Sources */,
 				A257AF0C246D45DD00B9C252 /* AppDelegate.swift in Sources */,
+				A26B8424246EC081004B330D /* ContrastProcessor.swift in Sources */,
 				A257AF0E246D45DD00B9C252 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +363,7 @@
 			baseConfigurationReference = 35AF918C3112FD99C71C1C5B /* Pods-UIKonfDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UIKonfDemo/UIKonfDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR6HV9J6AD;
 				INFOPLIST_FILE = UIKonfDemo/Info.plist;
@@ -363,6 +373,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.avolodin.UIKonfDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +384,7 @@
 			baseConfigurationReference = 7A0D4A3BAC3248524F949B48 /* Pods-UIKonfDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UIKonfDemo/UIKonfDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR6HV9J6AD;
 				INFOPLIST_FILE = UIKonfDemo/Info.plist;
@@ -382,6 +394,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.avolodin.UIKonfDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
